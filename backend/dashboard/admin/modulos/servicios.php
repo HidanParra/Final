@@ -216,7 +216,7 @@
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                <button class="btn btn-info">Nuevo Servicio</button> 
+                                <button class="btn btn-info" id="btn_nuevo">Nuevo Servicio</button> 
                                 <?php
                                 /*
                                     <li class="breadcrumb-item">
@@ -334,6 +334,87 @@
     <script src="../../dist/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
     <script src="../../dist/js/custom.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
+<!--Modal-->
+<div class="modal fade" id="modalusuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        <form id="formulario" action="">    
+            <div class="modal-body">
+                <div class="form-group">
+                <input type="text" class="form-control" id="matricula"  placeholder="Matricula">
+                </div>
+                <div class="form-group">
+                <input type="text" class="form-control" id="nombre"  placeholder="Nombre">
+                </div>               
+                <div class="form-group">
+                <input type="text" class="form-control" id="paterno" placeholder="Apellido paterno">
+                </div>    
+                <div class="form-group">
+                <input type="text" class="form-control" id="materno"  placeholder="Apellido materno:">
+                </div> 
+                <?php
+                /*
+                <div class="form-group">
+                   <select id="lista">
+                   <option value="0">Seleccionar Campus</option>
+                    <?php 
+                            $campus = $db->select("Campus","*"); 
+                            foreach ($campus as $campus => $cps) {
+                        ?>
+                                <option value="<?php echo $cps["cps_id"]?>"><?php echo $cps["cps_nombre"]?></option>
+                        <?php
+                            }
+                        ?>
+                   </select>
+                </div>  
+                */
+                ?>
+                <div class="form-group">
+                <input type="email" class="form-control" name="correo" id="correo" placeholder="Email">
+                </div>  
+                <div class="form-group">
+                <input type="password" class="form-control" id="pass" placeholder="ContraseÃ±a">
+                </div>
+                <div class="form-group">
+                <input type="number" class="form-control" id="tel" placeholder="Telefono">
+                </div>  
+                <?php
+                /*  
+                <div class="form-group">
+                   <select id="tipo">
+                   <option value="0">Seleccionar Tipo de usuario</option>
+                    <?php 
+                            $tipo = $db->select("Roles","*"); 
+                            foreach ($tipo as $tipo => $tyu) {
+                        ?>
+                                <option value="<?php echo $tyu["rol_Id"]?>"><?php echo $tyu["rol_Nombre"]?></option>
+                        <?php
+                            }
+                        ?>
+                   </select>
+                </div>  
+                */
+                ?>
+                <div class="form-group">
+                <input type="text" class="form-control" id="nivel" placeholder="Nivel educativo">
+                </div>  
+                
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" id="btnGuardar" class="btn btn-success">Guardar</button>
+            </div>
+        </form>    
+        </div>
+    </div>
+</div>     
