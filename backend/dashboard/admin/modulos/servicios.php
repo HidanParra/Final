@@ -350,17 +350,11 @@
         <form id="formulario" action="">    
             <div class="modal-body">
                 <div class="form-group">
-                <input type="text" class="form-control" id="matricula"  placeholder="Matricula">
-                </div>
-                <div class="form-group">
                 <input type="text" class="form-control" id="nombre"  placeholder="Nombre">
                 </div>               
                 <div class="form-group">
-                <input type="text" class="form-control" id="paterno" placeholder="Apellido paterno">
+                <input type="text" class="form-control" id="descripcion" placeholder="Descripcion">
                 </div>    
-                <div class="form-group">
-                <input type="text" class="form-control" id="materno"  placeholder="Apellido materno:">
-                </div> 
                 <?php
                 /*
                 <div class="form-group">
@@ -378,15 +372,6 @@
                 </div>  
                 */
                 ?>
-                <div class="form-group">
-                <input type="email" class="form-control" name="correo" id="correo" placeholder="Email">
-                </div>  
-                <div class="form-group">
-                <input type="password" class="form-control" id="pass" placeholder="ContraseÃ±a">
-                </div>
-                <div class="form-group">
-                <input type="number" class="form-control" id="tel" placeholder="Telefono">
-                </div>  
                 <?php
                 /*  
                 <div class="form-group">
@@ -404,11 +389,6 @@
                 </div>  
                 */
                 ?>
-                <div class="form-group">
-                <input type="text" class="form-control" id="nivel" placeholder="Nivel educativo">
-                </div>  
-                
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
