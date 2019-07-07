@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
-    <title>Nice admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Dashboard | Servicios</title>
     <!-- Custom CSS -->
     <link href="../../dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,7 +95,7 @@
                                 <div class="d-flex align-items-center">
                                     <i class="mdi mdi-magnify font-20 mr-1"></i>
                                     <div class="ml-1 d-none d-sm-block">
-                                        <span>Search</span>
+                                        <span>Buscar</span>
                                     </div>
                                 </div>
                             </a>
@@ -117,9 +117,13 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
                             <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>Cerrar sesion</a>
+                                <?php
+                                /*
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                */
+                                ?>
                             </div>
                         </li>
                         <!-- ============================================================== -->
@@ -142,23 +146,31 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.php" aria-expanded="false">
                                 <i class="mdi mdi-av-timer"></i>
-                                <span class="hide-menu">Dashboard</span>
+                                <span class="hide-menu">Inicio</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="usuarios.php" aria-expanded="false">
+                                <i class="mdi mdi-av-timer"></i>
+                                <span class="hide-menu">Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="servicios.php" aria-expanded="false">
                                 <i class="mdi mdi-account-network"></i>
-                                <span class="hide-menu">Profile</span>
+                                <span class="hide-menu">Servicios</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="comentarios.php" aria-expanded="false">
                                 <i class="mdi mdi-border-none"></i>
-                                <span class="hide-menu">Table</span>
+                                <span class="hide-menu">Comentarios</span>
                             </a>
                         </li>
+                        <?php
+                        /*
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false">
                                 <i class="mdi mdi-face"></i>
@@ -177,6 +189,8 @@
                                 <span class="hide-menu">404</span>
                             </a>
                         </li>
+                        */
+                        ?>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -196,37 +210,73 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-5 align-self-center">
-                        <h4 class="page-title">Starter Page</h4>
+                        <h4 class="page-title">Servicios</h4>
                     </div>
                     <div class="col-7 align-self-center">
                         <div class="d-flex align-items-center justify-content-end">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
+                                <button class="btn btn-info">Nuevo Servicio</button> 
+                                <?php
+                                /*
                                     <li class="breadcrumb-item">
-                                        <a href="#">Home</a>
+                                        <a href="#">Inicio</a>
                                     </li>
-                                    <li class="breadcrumb-item active" aria-current="page">Starter Page</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Servicios</li>
+                                */
+                                ?>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="row">
+                <div class="row">                        
                     <div class="col-12">
                         <div class="card">
+                            <?php
+                            /*
                             <div class="card-body">
-                                This is some text within a card block.
+                                <h4 class="card-title">Table Header</h4>
+                                <h6 class="card-subtitle">Similar to tables, use the modifier classes .thead-light to make <code>&lt;thead&gt;</code>s appear light.</h6>
+                            </div>
+                            */
+                            ?>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">First</th>
+                                            <th scope="col">Last</th>
+                                            <th scope="col">Handle</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -242,6 +292,12 @@
                 <!-- End Right sidebar -->
                 <!-- ============================================================== -->
             </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
